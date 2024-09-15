@@ -1,7 +1,6 @@
 # my_new_app
 
-A new Flutter project.
-![WhatsApp Image 2024-09-15 at 12 01 14_c6f071c7](https://github.com/user-attachments/assets/b338c22b-5a06-4b45-af4e-2cbe6caaf92b)
+A new Flutter project
 
 
 
@@ -9,3 +8,4 @@ A new Flutter project.
 ![WhatsApp Image 2024-09-09 at 09 28 20_e5ccbe85](https://github.com/user-attachments/assets/24dbef9e-0c17-4fac-abea-1b52314eebef)
 ![WhatsApp Image 2024-09-09 at 09 28 20_4f02be61](https://github.com/user-attachments/assets/ae8d87e2-ec3e-4fd1-a0c3-954a056cdfcb)
 ![WhatsApp Image 2024-09-09 at 09 28 19_e7ace328](https://github.com/user-attachments/assets/021360ed-b72c-4289-8c55-414ad50a4a41)
+![WhatsApp Image 2024-09-15 at 12 01 14_c6f071c7](https://github.com/user-attachments/assets/673193ca-525f-4523-b5aa-1c249c9edf14)
