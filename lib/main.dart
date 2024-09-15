@@ -54,7 +54,7 @@
 //       String storagePath = 'images/${DateTime.now().millisecondsSinceEpoch}.jpeg';
 //       Reference ref = _storage.ref().child(storagePath);
 //       UploadTask uploadTask = ref.putFile(file);
-      
+
 //       // Optional: Listen to state changes, errors, and completion of the upload task
 //       uploadTask.snapshotEvents.listen((TaskSnapshot snapshot) {
 //         print('Upload progress: ${snapshot.bytesTransferred} / ${snapshot.totalBytes}');
@@ -165,7 +165,7 @@
 //       String storagePath = 'images/${DateTime.now().millisecondsSinceEpoch}.jpeg';
 //       Reference ref = _storage.ref().child(storagePath);
 //       UploadTask uploadTask = ref.putFile(file);
-      
+
 //       uploadTask.snapshotEvents.listen((TaskSnapshot snapshot) {
 //         print('Upload progress: ${snapshot.bytesTransferred} / ${snapshot.totalBytes}');
 //       }, onError: (e) {
@@ -230,7 +230,6 @@
 //     );
 //   }
 // }
-
 
 //-
 // import 'package:flutter/material.dart';
@@ -863,7 +862,7 @@
 //   List<Map<String, Color>> getRecommendedColors(String skinTone, String gender) {
 //     switch (skinTone) {
 //       case 'Fair':
-//         return gender == 'Male' 
+//         return gender == 'Male'
 //           ? [
 //               {'Navy Blue': Color(0xFF000080)},
 //               {'Burgundy': Color(0xFF800020)},
@@ -1079,7 +1078,7 @@
 //                   Wrap(
 //                     spacing: 10,
 //                     runSpacing: 10,
-//                     children: recommendedColors.map((colorMap) => 
+//                     children: recommendedColors.map((colorMap) =>
 //                       Container(
 //                         width: 100,
 //                         height: 100,
@@ -1243,7 +1242,7 @@
 //   List<Map<String, Color>> getRecommendedColors(String skinTone, String gender) {
 //     switch (skinTone) {
 //       case 'Fair':
-//   return gender == 'Male' 
+//   return gender == 'Male'
 //     ?   [
 //         {'Navy Blue': Color(0xFF000080)},
 //         {'Burgundy': Color(0xFF800020)},
@@ -1519,7 +1518,7 @@
 //                           Wrap(
 //                             spacing: 10,
 //                             runSpacing: 10,
-//                             children: recommendedColors.map((colorMap) => 
+//                             children: recommendedColors.map((colorMap) =>
 //                               Container(
 //                                 width: 80,
 //                                 height: 80,
@@ -1743,7 +1742,7 @@
 
 //     switch (skinTone) {
 //       case 'Fair':
-//   return gender == 'Male' 
+//   return gender == 'Male'
 //     ?   [
 //         {'Navy Blue': Color(0xFF000080)},
 //         {'Burgundy': Color(0xFF800020)},
@@ -1877,7 +1876,7 @@
 //         return [];
 //     }
 //   }
-  
+
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -2061,18 +2060,17 @@
 //       ),
 //     );
 //   }
-  
+
 //   class _image {
 //   }
-  
+
 //   class _controller {
 //   }
-  
+
 //   class _initializeControllerFuture {
 //   }
-  
 
-  // File: colors.dart
+// File: colors.dart
 
 // import 'package:flutter/material.dart';
 // // import 'package:camera/camera.dart';
@@ -2230,7 +2228,7 @@
 //   List<Map<String, Color>> getRecommendedColors(String skinTone, String gender) {
 //     switch (skinTone) {
 //       case 'Fair':
-//   return gender == 'Male' 
+//   return gender == 'Male'
 //     ?   [
 //         {'Navy Blue': Color(0xFF000080)},
 //         {'Burgundy': Color(0xFF800020)},
@@ -2365,7 +2363,6 @@
 //     }
 //   }
 
-
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
@@ -2394,12 +2391,11 @@
 //       ),
 //     );
 //   }
-// } 
+// }
 // import 'package:flutter/material.dart';
 // import 'package:camera/camera.dart';
 // import 'face_color_detector_screen.dart';
 // import 'package:firebase_core/firebase_core.dart';
-
 
 // void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
@@ -2426,7 +2422,6 @@
 //     );
 //   }
 // }
-
 
 // import 'package:color_detector_app/main_page.dart';
 // import 'package:flutter/material.dart';
@@ -2473,7 +2468,7 @@
 // import 'main_page.dart';
 // import 'about_page.dart';
 // import 'splex.dart';  // Add this import
-// import 'login_page.dart'; 
+// import 'login_page.dart';
 // // import 'login_page.dart';   // Add this import
 
 // void main() async {
@@ -2511,23 +2506,117 @@
 //   }
 // }
 
+// import 'package:flutter/material.dart';
+// import 'package:camera/camera.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'face_color_detector_screen.dart';
+// import 'package:firebase_analytics/firebase_analytics.dart';
+// import 'splash_screen.dart';
+// import 'home_page.dart';
+// import 'main_page.dart';
+// import 'about_page.dart';
+// import 'splex.dart';
+// import 'login_page.dart';
+// import 'cloth.dart';
+// // import 'clothes.dart';// Add this import
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   final cameras = await availableCameras();
+//   runApp(MyApp(cameras: cameras));
+// }
+
+// class MyApp extends StatelessWidget {
+//   final List<CameraDescription> cameras;
+
+//   const MyApp({Key? key, required this.cameras}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: 'Face Color Detector',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//         visualDensity: VisualDensity.adaptivePlatformDensity,
+//       ),
+//       initialRoute: '/',  // Set the initial route
+//       routes: {
+//         '/': (context) => SplashScreen(),
+//         '/splex': (context) => SplexPage(),
+//         '/login': (context) => LoginPage(),
+//         '/home': (context) => HomePage(),
+//         '/main': (context) => FaceColorDetectorScreen(cameras: cameras),
+//         '/about': (context) => AboutPage(),
+//         '/main_page': (context) => MainPage(),
+//         '/cloth': (context) => ClothingColorRecommender(cameras: cameras),
+//       //   '/clothes': (context) => ClothingItem(id: 123); // Add this route
+//        },
+//     );
+//   }
+// }
+
+// import 'package:flutter/material.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'login_page.dart';
+// import 'signup_page.dart';
+// import 'forgot_password_page.dart';
+// import 'home_page.dart';
+// import 'about_page.dart';
+// import 'simple.dart';
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp(); // Initialize Firebase
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   // Define your routes here
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Auth Demo',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       initialRoute: '/login', // Set the initial route
+//       routes: {
+//         '/login': (context) => LoginPage(),
+//         '/signup': (context) => SignupPage(),
+//         '/forgot-password': (context) => ForgotPasswordPage(),
+//         '/home': (context) => HomePage(),
+//         '/about': (context) => AboutPage(),
+//         '/simple': (context) => SimplePage(),
+//         // Add other routes as needed
+//       },
+//     );
+//   }
+// }
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'face_color_detector_screen.dart';
+// import 'firebase_analytics.dart';
 import 'splash_screen.dart';
 import 'home_page.dart';
 import 'main_page.dart';
 import 'about_page.dart';
-import 'splex.dart';
 import 'login_page.dart';
-import 'cloth.dart'; 
-// import 'clothes.dart';// Add this import
+import 'signup_page.dart';
+import 'forgot_password_page.dart';
+import 'cloth.dart';
+import 'simple.dart';
+import 'fetchdata.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(); // Initialize Firebase
+
+  // Initialize available cameras
   final cameras = await availableCameras();
+
   runApp(MyApp(cameras: cameras));
 }
 
@@ -2540,23 +2629,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Face Color Detector',
+      title: 'Flutter Auth & Camera Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/',  // Set the initial route
+      // Set initial route to SplexPage (acts like splash screen)
+      initialRoute: '/splex',
       routes: {
-        '/': (context) => SplashScreen(),
-        '/splex': (context) => SplexPage(),
-        '/login': (context) => LoginPage(),
-        '/home': (context) => HomePage(),
-        '/main': (context) => FaceColorDetectorScreen(cameras: cameras),
-        '/about': (context) => AboutPage(),
-        '/main_page': (context) => MainPage(),
-        '/cloth': (context) => ClothingColorRecommender(cameras: cameras),
-      //   '/clothes': (context) => ClothingItem(id: 123); // Add this route
-       },
+        '/splex': (context) => SplashScreen(), // Splash-like screen
+        '/login': (context) => LoginPage(), // Login Page
+        '/signup': (context) => SignupPage(), // Signup Page
+        '/forgot-password': (context) =>
+            ForgotPasswordPage(), // Forgot Password
+        '/home': (context) => HomePage(), // Home Page
+        '/about': (context) => AboutPage(), // About Page
+        '/simple': (context) => SimplePage(), // Simple Page
+        '/main': (context) =>
+            FaceColorDetectorScreen(cameras: cameras), // Face detection
+        '/main_page': (context) => MainPage(), // Main page for camera
+        '/cloth': (context) => ClothingColorRecommender(
+            cameras: cameras), // Clothing Color Recommender
+        '/fetchdata': (context) => FetchDataPage(), // Page for fetching data
+      },
     );
   }
 }

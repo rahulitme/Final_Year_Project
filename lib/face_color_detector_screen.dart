@@ -1,11 +1,11 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:image/image.dart' as img;
 import 'package:image_picker/image_picker.dart';
-import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
+import 'package:image/image.dart' as img;
+import 'package:firebase_analytics/firebase_analytics.dart';
 
 class FaceColorDetectorScreen extends StatefulWidget {
   final List<CameraDescription> cameras;
@@ -13,7 +13,8 @@ class FaceColorDetectorScreen extends StatefulWidget {
   FaceColorDetectorScreen({required this.cameras});
 
   @override
-  _FaceColorDetectorScreenState createState() => _FaceColorDetectorScreenState();
+  _FaceColorDetectorScreenState createState() =>
+      _FaceColorDetectorScreenState();
 }
 
 class _FaceColorDetectorScreenState extends State<FaceColorDetectorScreen> {
@@ -67,12 +68,14 @@ class _FaceColorDetectorScreenState extends State<FaceColorDetectorScreen> {
 
   Future<void> _uploadFileToFirebase(File file) async {
     try {
-      String storagePath = 'images/${DateTime.now().millisecondsSinceEpoch}.jpeg';
+      String storagePath =
+          'images/${DateTime.now().millisecondsSinceEpoch}.jpeg';
       Reference ref = _storage.ref().child(storagePath);
       UploadTask uploadTask = ref.putFile(file);
 
       uploadTask.snapshotEvents.listen((TaskSnapshot snapshot) {
-        print('Upload progress: ${snapshot.bytesTransferred} / ${snapshot.totalBytes}');
+        print(
+            'Upload progress: ${snapshot.bytesTransferred} / ${snapshot.totalBytes}');
       }, onError: (e) {
         print('Error during upload: $e');
         _showNotification('Error uploading image', isError: true);
@@ -110,7 +113,8 @@ class _FaceColorDetectorScreenState extends State<FaceColorDetectorScreen> {
 
       if (decodedImage != null) {
         final cheekX = (face.boundingBox.left + face.boundingBox.right) ~/ 2;
-        final cheekY = (face.boundingBox.top + 3 * face.boundingBox.bottom) ~/ 4;
+        final cheekY =
+            (face.boundingBox.top + 3 * face.boundingBox.bottom) ~/ 4;
 
         final cheekPixel = decodedImage.getPixel(cheekX, cheekY);
         final r = img.getRed(cheekPixel);
@@ -141,7 +145,16 @@ class _FaceColorDetectorScreenState extends State<FaceColorDetectorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Face Color Detector')),
+      appBar: AppBar(
+        title: Text('Face Color Detector'),
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/home');
+          },
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -196,7 +209,8 @@ class _FaceColorDetectorScreenState extends State<FaceColorDetectorScreen> {
                       Text('Detected Face Color: ${detectedColor.toString()}'),
                     ],
                   )
-                : Text('Invalid: No face detected', style: TextStyle(color: Colors.red, fontSize: 18)),
+                : Text('Invalid: No face detected',
+                    style: TextStyle(color: Colors.red, fontSize: 18)),
           ],
         ),
       ),

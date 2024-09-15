@@ -25,7 +25,9 @@ class AboutPage extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/home');  // Navigate back to Home Page
+          },
         ),
       ),
       backgroundColor: Colors.purple.shade300,
@@ -53,7 +55,7 @@ class AboutPage extends StatelessWidget {
               for (String path in imagePaths)
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 15.0),
-                  child: Center(  // Added Center widget here
+                  child: Center(
                     child: Container(
                       decoration: BoxDecoration(
                         boxShadow: [

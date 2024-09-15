@@ -26,7 +26,7 @@ class SplexPage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/home'); // Navigate to Home Page
+                Navigator.pushNamed(context, '/login'); // Navigate to Home Page
               },
               child: Text('Go to Home Page'),
             ),
