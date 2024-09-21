@@ -1,6 +1,8 @@
-# my_new_app
+Fit And Finder
 
-A new Flutter project
+The Fit and Finer mobile app is developed using Dart and Firebase for Android. It allows users to scan their faces and recommends the best clothing colors based on their skin tone and facial features. 
+The app leverages Firebase for backend services such as user authentication and data storage, ensuring a seamless and personalized user experience. 
+The main feature is a face detection system that analyzes the user's facial characteristics and suggests optimal clothing color choices. This helps users make informed fashion decisions with ease.
 
 
 
